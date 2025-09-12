@@ -30,16 +30,17 @@ void PhoneBook::add_contact()
 }
 void PhoneBook::list_contacts()
 {
-    std::cout << "\t---index--|-fistname-|-lastname-|-nickname" << std::endl;
+    std::cout << "\t|index|--fistname|--lastname|--nickname|" << std::endl;
+    std::cout << "\t----------------------------------------" << std::endl;
     for(int i=0;i<this->size;i++)
     {
-        std::cout << "\t    " << std::setw(10) << i;
+        std::cout << "    " << std::setw(10) << i;
         std::cout <<"|" << std::setw(10)  << this->contacts[i].get_first_name();
         std::cout <<"|" << std::setw(10)  << this->contacts[i].get_last_name();
         std::cout <<"|" << std::setw(10)  << this->contacts[i].get_nickname()<< "|";
         std::cout << std::endl;
     }
-    std::cout << "---------------------------------------------------------------------" << std::endl;
+    std::cout << "\t----------------------------------------" << std::endl;
 }
 void PhoneBook::show_contact(int index)
 {
