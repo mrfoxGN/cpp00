@@ -17,7 +17,7 @@ int main()
     a.name="anass";
     a.print();
 }*/
-void print_upper(char *str)
+/*void print_upper(char *str)
 {
     while(*str)
     {
@@ -27,7 +27,7 @@ void print_upper(char *str)
             std::cout << (char)*str;
         str++;
     }
-}
+}*/
 int main(int ac,char **av)
 {
     int i = 1;
