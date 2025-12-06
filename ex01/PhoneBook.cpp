@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anguenda <anguenda@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/06 16:36:43 by anguenda          #+#    #+#             */
+/*   Updated: 2025/12/06 16:36:44 by anguenda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
 #include "PhoneBook.hpp"
 #include <iomanip>
 #include <stdlib.h>
@@ -13,18 +27,22 @@ int PhoneBook::get_size(void)
 {
     return(this->size);
 }
-void getinput(std::string &str,std::string text)
+void getinput(std::string &s,std::string text)
 {
-    str.clear();
-    while(str.empty())
+    for (;;)
     {
-        std::cout<< text;
-        std::getline(std::cin,str);
-        if(std::cin.eof())
-        {
-            std::cout << std::endl;
-            exit(0);
-        }
+        std::cout << text;
+        if (!std::getline(std::cin, s))
+        { std::cout << std::endl; std::exit(0); }
+
+        if (s.empty())
+            continue;
+
+        size_t i = 0;
+        while (i < s.size() && std::isprint((unsigned char)s[i]))
+            ++i;
+        if (i == s.size())         
+            return;
     }
 }
 void PhoneBook::add_contact()

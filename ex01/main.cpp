@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anguenda <anguenda@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/06 16:36:26 by anguenda          #+#    #+#             */
+/*   Updated: 2025/12/06 16:36:27 by anguenda         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 
 #include "PhoneBook.hpp"
 #include <cstdlib>
@@ -17,7 +30,7 @@ int	main(void)
 	bool		run;
 
 	run = true;
-	std::cout << "Welcome to your phonebook. You type ADD to add a contact, SEARCH to find a contact or EXIT." << std::endl;
+	std::cout << "=====Welcome phonebook. type ADD to add a contact, SEARCH to find a contact or EXIT=========" << std::endl;
 	while (run)
 	{
 		std::string query;
