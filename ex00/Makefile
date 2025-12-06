@@ -11,7 +11,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS)  $(OBJ) -o $(NAME)
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) $(INC) -c $< -o $@
+	$(CC) $(CFLAGS)  -c $< -o $@
 
 clean:
 	rm -f *.o
