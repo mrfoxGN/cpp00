@@ -14,9 +14,9 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS)  -c $< -o $@
 
 clean:
-	rm -f *.o
+	@rm -f *.o
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 re: fclean all
 
 .SECONDARY: $(OBJ)
